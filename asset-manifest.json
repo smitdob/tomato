@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tomato/static/css/main.1818d438.css",
-    "main.js": "/tomato/static/js/main.ee869ad1.js",
+    "main.js": "/tomato/static/js/main.fb73c8ad.js",
     "static/js/787.9c166d28.chunk.js": "/tomato/static/js/787.9c166d28.chunk.js",
     "index.html": "/tomato/index.html",
     "static/media/slick.svg": "/tomato/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -9,11 +9,11 @@
     "static/media/slick.ttf": "/tomato/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/tomato/static/media/slick.295183786cd8a1389865.woff",
     "main.1818d438.css.map": "/tomato/static/css/main.1818d438.css.map",
-    "main.ee869ad1.js.map": "/tomato/static/js/main.ee869ad1.js.map",
+    "main.fb73c8ad.js.map": "/tomato/static/js/main.fb73c8ad.js.map",
     "787.9c166d28.chunk.js.map": "/tomato/static/js/787.9c166d28.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1818d438.css",
-    "static/js/main.ee869ad1.js"
+    "static/js/main.fb73c8ad.js"
   ]
 }
