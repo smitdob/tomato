@@ -21,8 +21,6 @@ import Backtotop from '../../Component/Common/backtotop/Backtotop'
 const HomePage = (props) => {
   const location = useLocation()
 
-
-
   const [activeTab, setActiveTab] = useState(`${location.pathname.slice(1)}`)
   const [detailsetdata, setSetdata] = useState([])
 
@@ -41,7 +39,7 @@ const HomePage = (props) => {
         case "nightlife" :
         return setSetdata(Nightlife);
         default:
-          return ''
+          return setActiveTab('dilevery')
       }
   }
   useEffect(() => {
@@ -51,11 +49,13 @@ const HomePage = (props) => {
     <>  
       <Backtotop/>
       <Header setActiveTab={setActiveTab} />
-      <TabOptions setActiveTab={setActiveTab} activeTab={activeTab} />
+      <TabOptions setActiveTab={setActiveTab} activeTab={activeTab}/>
       <Routes>
-        <Route exact path='/tomato.github.io' element={<Navigate to='/dilevery' />} />
+        {/* <Route exact path='/tomato.github.io' element={<Navigate to='/dilevery' />} /> */}
+        <Route exact path='/tomato' element={<Navigate to='/dilevery'/>}/>
+        <Route exact path='/tomato/' element={<Navigate to='/dilevery' />} />
         <Route exact path='/' element={<Navigate to='/dilevery' />} />
-        <Route exact path='' element={<Navigate to='/dilevery' />} />
+        <Route exact path='' element={<Navigate to='/dilevery' />} /> 
         <Route exact path='/dilevery' element={<Dilevery props={activeTab} />} />
         <Route exact path='/diningout' element={<DiningOut props={activeTab} />} />
         <Route exact path='/nightlife' element={<NightLife props={activeTab} />} />

@@ -56,25 +56,24 @@ const Cart = (props) => {
                                             <div className="item-detail-content col-5">
                                                 <div className="row">
                                                     <h4 className='product-detail-title'>{ele.info.name} - i Love Food, ooh Yeh</h4>
-                                                    <div className="detail-price">
-                                                        <span className='edtail-page-price'> ₹ {ele.info.price * ele.qnty}</span>
-                                                    </div>
+
                                                     <div className="item-detail-cart-action text-center">
                                                         <div className="quantity-buttons">
                                                             <Tooltip title='Decrese quantity'><span className='' style={{ fontSize: 24, cursor: "pointer" }} onClick={ele.qnty <= 1 ? () => dlt(ele.Id) : () => remove(ele)}>-</span></Tooltip>
                                                             <span className='' style={{ fontSize: 24, cursor: "pointer" }} >{ele.qnty}</span>
                                                             <Tooltip title='Increse quantity'><span className='' style={{ fontSize: 24, cursor: "pointer" }} onClick={() => send(ele)}>+</span></Tooltip>
                                                         </div>
+                                                        <Tooltip title='Delete from Cart'>
+                                                            <span aria-label="Delete from Cart" class="" data-mui-internal-clone-element="true">
+                                                                <i class="fa-solid fa-trash-can cur-po" onClick={() => dlt(ele.Id)}></i>
+                                                            </span>
+                                                        </Tooltip>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className="item-detail-content col-2">
-                                                <div className="add-to-cart-btn">
-                                                    <Tooltip title='Delete from Cart'>
-                                                        <span>
-                                                            <i class="fa-solid fa-trash-can cur-po" onClick={() => dlt(ele.Id)}></i>
-                                                        </span>
-                                                    </Tooltip>
+                                                <div className="price-wrapping">
+                                                    <span className='edtail-page-price'> ₹ {ele.info.price * ele.qnty}</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -85,7 +84,7 @@ const Cart = (props) => {
                         <div className="grand-total">
                             <div className="g-total-wrapper">
                                 <div className="grandtotal-wrapper">
-                                    <p className='grand-total-p'>Total : ₹{price}</p>
+                                    <p className='grand-total-p'>₹{price}</p>
                                 </div>
                                 <div className="checkout-btn-wrapper">
                                     <Link className='checkout btn btn-primary'> Check Out</Link>

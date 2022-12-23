@@ -70,13 +70,13 @@ const Cart = () => {
                                                         <div className="header-cart-content">
                                                             <p className='header-cart-content-name'> <span className='text different'>{(e.info.name.length) > 17 ? e.info.name.slice(0, 20) + "..." : e.info.name}</span> </p>
                                                             {/* <p className='header-cart-content-price'>Price : <span className='text different'> ₹ {e.info.price}</span> </p> */}
-                                                            <p className='header-cart-content-qnty'>Quantity : <span className='text different qnty-btn-wrapper'>
+                                                            <p className='header-cart-content-qnty minicart'> <span className='text different qnty-btn-wrapper'>
                                                                 <span className='qnty-btn cur-po' onClick={e.qnty <= 1 ? () => dlt(e.Id) : () => remove(e)}>-</span>
                                                                 <span className='qnty-btn cur-po'>{e.qnty}</span>
                                                                 <span className='qnty-btn cur-po' onClick={() => send(e)}>+</span>
                                                             </span>
                                                             </p>
-                                                            <p className='header-cart-total'>Total : ₹ {e.info.price * e.qnty}</p>
+                                                            <p className='header-cart-total'> ₹ {e.info.price * e.qnty}</p>
                                                         </div>
                                                     </div>
                                                 </div>
